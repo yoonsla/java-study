@@ -13,19 +13,19 @@
 - default 값은 false이며 Wrapper class는 Boolean
 
 ### 정수형
-###### byte
+##### byte
 - 길이가 8bit인 부호가 있는 정수형 타입으로 범위는 -128 ~ 127
 - default 값은 0, Wrapper class는 byte
 
-##### short
+#### short
 - 길이가 18bit인 부호가 있는 정수형 타입으로 범위는 -32768 ~ 32767
 - default 값은 0, Wrapper class는 Short
 
-##### int
+#### int
 - 길이가 32bit인 부호가 있는 정수형 타입으로 범위는 -2147483648 ~ 2147483647
 - default 값은 0, Wrapper class는 Integer
 
-##### long
+#### long
 - 길이가 64bit인 부호가 있는 정수형 타입으로 범위느 -9223372036854775808 ~ 9223372036854775807
 - default 값은 0L, L은 long 타입의 리터럴
 - wrapper class는 Long
