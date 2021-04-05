@@ -26,12 +26,27 @@
 - default 값은 0, Wrapper class는 Integer
 
 #### long
-- 길이가 64bit인 부호가 있는 정수형 타입으로 범위느 -9223372036854775808 ~ 9223372036854775807
+- 길이가 64bit인 부호가 있는 정수형 타입으로 범위는 -9223372036854775808 ~ 9223372036854775807
 - default 값은 0L, L은 long 타입의 리터럴
 - wrapper class는 Long
 
-### 
+### 실수형
+#### float
+- 길이가 32bit인 부호가 있는 실수형 타입으로 범위는 1.40239846e-45f ~3.40282347e+38f
+- default 값은 0.0f, f는 float 타입의 리터럴
+- wrapper class는 Float
 
+#### double
+- 길이가 64bit 인 부호가 있는 실수형 타입으로 범위는 4.94065645841246544e-324~1.79769313486231570e+308
+- default 값은 0.0d 이며, d 는 double 타입의 리터럴
+- Wrapper class 는 Double
+
+### 문자형
+#### char
+- 길이가 16bit인 유니코드 문자형 타입으로 범위는 \u0000 ~ \uffff (0 ~ 2^15-1) 
+- default 값은 \u0000이며, Wrapper class 는 Character
+
+### 리터럴(Literal)
 
 # 참조형(Reference type)
 
