@@ -47,6 +47,9 @@
 - default 값은 \u0000이며, Wrapper class 는 Character
 
 ### 리터럴(Literal)
+- 데이터 그 자체
+- 변수에 넣는 변하지 않는 데이터를 의미
+- * String 데이터 타입은 참조형 변수지만 연속적인 문자를 표시하기 위한 리터럴이 제공되고 있음
 
 # 참조형(Reference type)
 
