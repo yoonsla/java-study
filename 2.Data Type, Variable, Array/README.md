@@ -110,17 +110,21 @@ public static void main(String[] args) {
 - 중괄호 { } 로 한 영역이 생성된다면 그 영역에 관한 스코프를 형성함
 <pre>
 <code>
-public static void main(String[] args) {
-	int number = 1;
-	int number2 = 1;
-	System.out.println(number + number2); // 2
-	add();
-}
+pulbic class Test {
+	int num = 10; // 멤버 변수
+	static int num2 = 20; // static 변수
+	public static void main(String[] args) {
+		int number = 1; // 지역 변수
+		int number2 = 1;
+		System.out.println(number + number2); // 2
+		add();
+	}
 
-public static void add() {
-	int number = 3;
-	int number2 = 4;
-	System.out.println(number + number2); // 7
+	public static void add() {
+		int number = 3;
+		int number2 = 4;
+		System.out.println(number + number2); // 7
+	}
 }
 </code>
 </pre>
@@ -130,7 +134,19 @@ public static void add() {
 - 스코프는 {} / () 를 벗어나면 소멸되는 특징을 가지고 있음
 
 #### 멤버 변수(Instance variable)
+- 클래스 내부와 모든 메소드 및 블록 외부에 선언된 변수
+- static 메소드를 제외한 클래스 어디서든 사용 가능
+- 라이프타임은 객체가 메모리에 남아있을 때까지
 
 #### static 변수(Class Variable)
+- 클래스 내부와 모든 메소드 및 블록 외부에서 static으로 선언된 변수
+- 클래스 어디에서나 사용 가능
+- 라이프타임은 프로그램이 끝날 때까지, 또는 클래스가 메모리에 로드되는 동안
 
 #### 지역 변수(Local Variable)
+- 멤버 변수와 static 변수를 제외한 모든 변수
+- 선언 된 블록 내에서 사용 가능
+- 라이프타임은 컨트롤이 선언된 블록을 떠날 때까지
+
+# 타입변환
+- Java의 타입 변환에는 자동 타입 변환(promotion)과 강제 타입 변환(casting)
