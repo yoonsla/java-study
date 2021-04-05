@@ -128,4 +128,9 @@ public static void add() {
 - 만약 변수의 스코프가 없다면 불가능한 소스
 - 같은 이름의 변수가 다른 메소드에서 각각 형성되었지만 스코프가 있기에 가능
 - 스코프는 {} / () 를 벗어나면 소멸되는 특징을 가지고 있음
-- 이런 변수를 지역 변수라고 
+
+#### 멤버 변수(Instance variable)
+
+#### static 변수(Class Variable)
+
+#### 지역 변수(Local Variable)
