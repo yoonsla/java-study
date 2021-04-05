@@ -49,11 +49,57 @@
 ### 리터럴(Literal)
 - 데이터 그 자체
 - 변수에 넣는 변하지 않는 데이터를 의미
-- * String 데이터 타입은 참조형 변수지만 연속적인 문자를 표시하기 위한 리터럴이 제공되고 있음
+- String 데이터 타입은 참조형 변수지만 연속적인 문자를 표시하기 위한 리터럴이 제공되고 있음
 
 # 참조형(Reference type)
+- 래퍼런스 타입은 new 연산자를 통해 heap 영역에 생성되는 자료형을 의미
+- heap 영역에 실제 데이터가 저장되고, 스택 영역에 주소값이 저장됨
+- 래퍼런스 타입으로는 클래스, 배열, 인터페이스 등이 있음
 
+### String 클래스
+- String 클래스는 참조형에 속하지만 기본형처럼 사용함
+- 불변하는 객체이며 데이터를 바꾸는 메소드들은 새로운 String 클래스를 만드는 것
+- String 클래스 간의 비교는 equals() 메소드를 사용해야함
 
+### 클래스형 (Class type)
 
+<pre>
+<code>
+class User {
+	private String name;
+	User(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+}
 
-https://gbsb.tistory.com/6#:~:text=%ED%83%80%EC%9E%85(Data%20type)%EC%9D%B4%EB%9E%80%20%ED%95%B4%EB%8B%B9,%EC%B0%B8%EC%A1%B0%ED%98%95%20%ED%83%80%EC%9E%85%EC%9D%B4%20%EC%9E%88%EB%8B%A4.
+public static void main(String[] args) {
+    User user1 = new User("yoonsla");
+		User user2 = new User("sangyoon");
+		System.out.println("1: " + user1);
+		System.out.println("2: " + user1.getName());
+		user1 = user2;
+		System.out.println("3: " + user1.getName());
+		user2.setName("yoonsla");
+		System.out.println("4: " + user1.getName());
+	}
+}
+</code>
+</pre>
+
+- user1을 출력했을 때는 user1의 인스턴스 hashcode값이 출력됨, 주소값이 같으면 해쉬코드 값이 같음
+- User 클래스의 데이터 타입은 참조형(class type)
+- 주소값을 참조하고 있는 클래스형이기 때문에 user1 = user2를 했을 경우 두 개의 주소값이 같아져, b의 값을 바꿨을 때 a의 값도 변함
+
+### 인터페이스형(Interface type)
+- interface는 참조형이기 때문에 자신을 구현한 객체의 주소를 가질 수 있음
+
+### 배열형(Array type)
+- 배열형은 기본형 배열, 참조형 배열 모두 만들 수 있음
+- 자료형에 대해 []를 선언하여 배열을 지정할 수 있으며 주소값을 가지고 있기 때문에 클래스형과 일치하는 특징을 가지고 
+
