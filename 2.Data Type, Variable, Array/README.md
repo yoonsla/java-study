@@ -103,3 +103,29 @@ public static void main(String[] args) {
 - 배열형은 기본형 배열, 참조형 배열 모두 만들 수 있음
 - 자료형에 대해 []를 선언하여 배열을 지정할 수 있으며 주소값을 가지고 있기 때문에 클래스형과 일치하는 특징을 가지고 있음
 
+# 스코프와 라이프타임
+### 스코프
+- 스코프 = 영역
+- 변수에 대한 접근과 변수가 존재할 수 있는 영역
+- 중괄호 { } 로 한 영역이 생성된다면 그 영역에 관한 스코프를 형성함
+<pre>
+<code>
+public static void main(String[] args) {
+	int number = 1;
+	int number2 = 1;
+	System.out.println(number + number2); // 2
+	add();
+}
+
+public static void add() {
+	int number = 3;
+	int number2 = 4;
+	System.out.println(number + number2); // 7
+}
+</code>
+</pre>
+
+- 만약 변수의 스코프가 없다면 불가능한 소스
+- 같은 이름의 변수가 다른 메소드에서 각각 형성되었지만 스코프가 있기에 가능
+- 스코프는 {} / () 를 벗어나면 소멸되는 특징을 가지고 있음
+- 이런 변수를 지역 변수라고 
