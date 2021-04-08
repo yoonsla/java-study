@@ -187,6 +187,8 @@ public class CastingTest {
 # 1차 배열, 2차 배열 선언
 - 배열이란 같은 자료형의 데이터들을 연속된 공간에 저장하기 위한 자료구조
 - 연관된 데이터를 그룹핑하는 역할을 하며, 중복된 변수의 선언을 줄이고 반복문과 같은 복잡한 계산 과정을 편하게 처리해줌
+- 1차원 배열은 스택 영역에 배열의 주소값이 담겨있고 힙영역부터 배열의 길이만큼 할당되어 있음
+- 2차원 배열은 스택 영역에 배열의 주소값이 담겨있고 주소값이 가리키고 있는 힙영역부터 배열의 길이만큼 하위 배열의 주소값이 담겨있음
 
 <pre>
 <code>
@@ -206,6 +208,41 @@ public class ArrayTest {
 		int [][] arrs3 = new int[2][3];
 		int [][] arrs4 = {{1,2,3},{4,5,6}};
 		int [][] arrs5 = new int [][]{{1,2,3},{4,5,6}};
+	}
+}
+</code>
+</pre>
+
+# 타입추론
+- Java 10에서 var 라는 Local Variable Type-inference 등장
+- 코드 작성 시 타입이 정해지지는 않았지만 컴파일러가 그 타입을 유추하는 것
+- "var"는 지역변수 이면서 선언과 동시에 초기화가 되어야 함
+- 따라서 멤버변수, 메소드의 파라미터, 리턴 타입으로 사용 불가
+
+<pre>
+<code>
+public Class TypeTest {
+	public static void main(String[] arsg) {
+		var booleanVal = true;
+		var intVal = 1;
+		var doubleVal = 10.0;
+		var charVal = 'A';
+		var strVal = "Hello World";
+
+		Object result = booleanVal;
+		System.out.println("boolenVal: " + (result instanceof Boolean)); 	// true
+
+		result = intVal;
+		System.out.println("intVal: " + (result instanceof Integer));		// true
+
+		result = doubleVal;
+		System.out.println("doubleVal: " + (result instanceof Double));		// true
+
+		result = charVal;
+		System.out.println("charVal: " + (result instanceof  Character));	// true
+
+		result = strVal;
+		System.out.println("strVal: " + (result instanceof  String));		// true
 	}
 }
 </code>
