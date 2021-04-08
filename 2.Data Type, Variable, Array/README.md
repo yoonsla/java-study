@@ -157,7 +157,7 @@ pulbic class Test {
 
 <pre>
 <code>
-public class promotion {
+public class promotionTest {
 	public static void main(String [] args) {
 		byte bVal = 4;
 		int intVal = bVal;	// 자동으로 변환되어 int 타입으로 변함
@@ -174,11 +174,38 @@ public class promotion {
 
 <pre>
 <code>
-public class promotion {
+public class CastingTest {
 	public static void main(String [] args) {
 		int intVal = 103029770;
 		byte bVal = intVal; 	// 컴파일 에러 발생
 		byte bVal2 = (byte)intVal;
+	}
+}
+</code>
+</pre>
+
+# 1차 배열, 2차 배열 선언
+- 배열이란 같은 자료형의 데이터들을 연속된 공간에 저장하기 위한 자료구조
+- 연관된 데이터를 그룹핑하는 역할을 하며, 중복된 변수의 선언을 줄이고 반복문과 같은 복잡한 계산 과정을 편하게 처리해줌
+
+<pre>
+<code>
+public class ArrayTest {
+	public static void main(String [] args) {
+		int [] arr;
+		int arr2[];
+		int [] arr3 = new int[3];
+		arr[0] = 1;
+		arr[1] = 2;
+		arr[2] = 3;
+		int [] arr4 = {1,2,3};
+		int [] arr5 = new int[]{1,2,3};
+		
+		int [][] arrs;
+		int arrs2 [][];
+		int [][] arrs3 = new int[2][3];
+		int [][] arrs4 = {{1,2,3},{4,5,6}};
+		int [][] arrs5 = new int [][]{{1,2,3},{4,5,6}};
 	}
 }
 </code>
