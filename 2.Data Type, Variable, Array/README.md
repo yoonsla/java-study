@@ -150,3 +150,36 @@ pulbic class Test {
 
 # 타입변환
 - Java의 타입 변환에는 자동 타입 변환(promotion)과 강제 타입 변환(casting)
+
+### 자동 타입 변환(Promotion)
+- 크기가 작은 자료형을 큰 자료형에 대입할 때, 자동으로 작은 자료형이 큰 자료형으로 변환되는 현상
+- 타입 크기 (byte < short < int < long < float < double)
+
+<pre>
+<code>
+public class promotion {
+	public static void main(String [] args) {
+		byte bVal = 4;
+		int intVal = bVal;	// 자동으로 변환되어 int 타입으로 변함
+		double dVal = intVal;	// 실수형으로 바뀌어 .0이 뒤에 붙음
+		char charVal = 'A';
+		intVal = charVal;	// 문자 타입을 int로 바꾸면 유니코드 값이 저장됨
+	}
+}
+</code>
+</pre>
+
+### 강제 타입 변환(Casting)
+- 크기가 큰 자료형을 작은 자료형으로 변환할 때는 강제로 변환을 해야 함(Casting)
+
+<pre>
+<code>
+public class promotion {
+	public static void main(String [] args) {
+		int intVal = 103029770;
+		byte bVal = intVal; 	// 컴파일 에러 발생
+		byte bVal2 = (byte)intVal;
+	}
+}
+</code>
+</pre>
