@@ -69,6 +69,9 @@ switch (num) {
 System.out.println("returnNum: " + "[" + returnNum + "]"); // 1
 
 // java 12
+// ->(화살표) 표현이 가능하고 data만 존재할 경우 return이 가능함
+// -> 구문을 사용할 경우 break;를 적지 않아도 다음 case 구문으로 넘어가지 않음
+// -> 표현 오른쪽은 꼭 단일 수행일 필요가 없음 {} 안에서의 작업도 가능함
 returnNum = switch(num) {
     case 1 -> 1;
     case 2 -> 2;
@@ -77,6 +80,8 @@ returnNum = switch(num) {
 System.out.println("returnNum: " + "[" + returnNum + "]"); // 1
 
 // java 13
+// yield 예약어 추가 (yield x => x 리턴)
+// yield는 예약어이지만 변수명으로도 사용 가능함 (int yield = 3;)
 returnNum = switch(num) {
     case 1 : yield 3;
     default: throw new IllegalStateException("Unexpected Value: " + num);
