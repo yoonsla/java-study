@@ -108,8 +108,7 @@ public static void main(String[] args) {
 - 스코프 = 영역
 - 변수에 대한 접근과 변수가 존재할 수 있는 영역
 - 중괄호 { } 로 한 영역이 생성된다면 그 영역에 관한 스코프를 형성함
-<pre>
-<code>
+```java
 pulbic class Test {
 	int num = 10; // 멤버 변수
 	static int num2 = 20; // static 변수
@@ -126,8 +125,7 @@ pulbic class Test {
 		System.out.println(number + number2); // 7
 	}
 }
-</code>
-</pre>
+```
 
 - 만약 변수의 스코프가 없다면 불가능한 소스
 - 같은 이름의 변수가 다른 메소드에서 각각 형성되었지만 스코프가 있기에 가능
@@ -155,8 +153,7 @@ pulbic class Test {
 - 크기가 작은 자료형을 큰 자료형에 대입할 때, 자동으로 작은 자료형이 큰 자료형으로 변환되는 현상
 - 타입 크기 (byte < short < int < long < float < double)
 
-<pre>
-<code>
+```java
 public class promotionTest {
 	public static void main(String [] args) {
 		byte bVal = 4;
@@ -181,8 +178,7 @@ public class CastingTest {
 		byte bVal2 = (byte)intVal;
 	}
 }
-</code>
-</pre>
+```
 
 # 1차 배열, 2차 배열 선언
 - 배열이란 같은 자료형의 데이터들을 연속된 공간에 저장하기 위한 자료구조
@@ -190,8 +186,7 @@ public class CastingTest {
 - 1차원 배열은 스택 영역에 배열의 주소값이 담겨있고 힙영역부터 배열의 길이만큼 할당되어 있음
 - 2차원 배열은 스택 영역에 배열의 주소값이 담겨있고 주소값이 가리키고 있는 힙영역부터 배열의 길이만큼 하위 배열의 주소값이 담겨있음
 
-<pre>
-<code>
+```java
 public class ArrayTest {
 	public static void main(String [] args) {
 		int [] arr;
@@ -210,8 +205,7 @@ public class ArrayTest {
 		int [][] arrs5 = new int [][]{{1,2,3},{4,5,6}};
 	}
 }
-</code>
-</pre>
+```
 
 # 타입추론
 - Java 10에서 var 라는 Local Variable Type-inference 등장
@@ -219,8 +213,7 @@ public class ArrayTest {
 - "var"는 지역변수 이면서 선언과 동시에 초기화가 되어야 함
 - 따라서 멤버변수, 메소드의 파라미터, 리턴 타입으로 사용 불가
 
-<pre>
-<code>
+```java
 public Class TypeTest {
 	public static void main(String[] arsg) {
 		var booleanVal = true;
@@ -245,5 +238,4 @@ public Class TypeTest {
 		System.out.println("strVal: " + (result instanceof  String));		// true
 	}
 }
-</code>
-</pre>
+```
