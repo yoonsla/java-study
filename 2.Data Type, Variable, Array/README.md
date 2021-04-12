@@ -63,8 +63,7 @@
 
 ### 클래스형 (Class type)
 
-<pre>
-<code>
+```java
 class User {
 	private String name;
 	User(String name) {
@@ -89,8 +88,7 @@ public static void main(String[] args) {
 		System.out.println("4: " + user1.getName());
 	}
 }
-</code>
-</pre>
+```
 
 - user1을 출력했을 때는 user1의 인스턴스 hashcode값이 출력됨, 주소값이 같으면 해쉬코드 값이 같음
 - User 클래스의 데이터 타입은 참조형(class type)
