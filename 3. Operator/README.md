@@ -52,7 +52,7 @@
     - java13부터 yield 키워드 도입
     - 화살표 연산자(->) 사용 가능
 
-```
+```java
 // java 12 이전
 int num = 1;
 int returnNum = 0;
