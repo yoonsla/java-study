@@ -46,3 +46,40 @@
 
 ### 대입 연산자: =
     - 값을 변수에 대입하는 연산자
+
+### switch 연산자
+    - java12부터 preview로 업데이트 된 기능
+    - java13부터 yield 키워드 도입
+    - 화살표 연산자(->) 사용 가능
+
+```
+// java 12 이전
+int num = 1;
+int returnNum = 0;
+switch (num) {
+    case 1:
+        returnNum = 1;
+        System.out.println("1들어와");
+        break;
+    case 2:
+        returnNum = 2;
+        System.out.println("2들어와");
+        break;
+}
+System.out.println("returnNum: " + "[" + returnNum + "]"); // 1
+
+// java 12
+returnNum = switch(num) {
+    case 1 -> 1;
+    case 2 -> 2;
+    default -> throw new IllegalStateException("Unexpected Value: " + num);
+}
+System.out.println("returnNum: " + "[" + returnNum + "]"); // 1
+
+// java 13
+returnNum = switch(num) {
+    case 1 : yield 3;
+    default: throw new IllegalStateException("Unexpected Value: " + num);
+}
+System.out.println("returnNum: " + "[" + returnNum + "]"); // 3
+```
