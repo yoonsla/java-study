@@ -77,12 +77,10 @@ class overloadingTest {
 
 public class overTest {
   public static void main(String [] args) {
-    SpringApplication.run(TestApplication.class, args);
-
-		overloadingTest ot = new overloadingTest();
-		ot.cat();             // cat() 호출
-		ot.cat(20,80);        // cat(int, int) 호출
-		ot.cat("고양이는 귀여워");     // cat(String) 호출
+      overloadingTest ot = new overloadingTest();
+      ot.cat();             	  // cat() 호출
+      ot.cat(20,80);        	  // cat(int, int) 호출
+      ot.cat("고양이는 귀여워");  // cat(String) 호출
   }
 }
 ```
@@ -92,31 +90,29 @@ public class overTest {
 
 ```java
 class Woman {
-	public String name;
-	public int age;
+    public String name;
+    public int age;
 
-	public void info() {
-		System.out.println("여자의 이름은 " + name + "이며 나이는 " + "age" + "입니다");
-	}
+    public void info() {
+	System.out.println("여자의 이름은 " + name + "이며 나이는 " + "age" + "입니다");
+    }
 }
 
 class Job extends Woman{
-	String job;
-
-	public void info() {
-		super.info();
-		System.out.println();
-	}
+   String job;
+   public void info() {
+	super.info();
+	System.out.println();
+   }
 }
 
 public overTest {
-  public void main(String[] args) {
+  public static void main(String[] args) {
     Job job = new Job();
-    Job job = new Job();
-		job.name = "미숙이";
-		job.age = 30;
-		job.job = "프로그래머";
-		job.info();
+    job.name = "미숙이";
+    job.age = 30;
+    job.job = "프로그래머";
+    job.info();
   }
 }
 ```
