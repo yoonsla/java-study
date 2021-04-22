@@ -56,7 +56,14 @@ public Class Car {
 - 즉, 메소드를 사용하면 중복되는 코드의 반복적인 프로그래밍을 피할 수 있음
 - 내부에서 사용하는 메소드는 접근제어자를 private으로 설정하고 그 외에는 상황에 맞게 public, default, protected로 설정
 
-#### 오버라이딩 & 오버로딩
+#### 오버로딩 & 오버라이딩
+1. 오버로딩
+- 같은 이름의 메소드 여러개를 가지면서 매개변수의 유형과 개수가 다르도록 하는 기술
+- 같은 이름의 메소드를 여러개 정의하고 매개변수의 유형과 개수를 다르게 하여 다양한 유형의 호출에 응답할 수 있음
+
+
+2. 오버라이딩
+- 상위 클래스가 가지고 있는 메소드를 하위 클래스가 재정의하여 사용하는 것
 
 
 ##### 접근제어자
@@ -221,8 +228,8 @@ public class InnerExam {
   }
   
   Cal cal = new Cal();
-		cal.plus();
-		System.out.println(cal.value);
+  cal.plus();
+  System.out.println(cal.value);
   
   // static class Cal{
   //	int value = 0;
@@ -249,15 +256,12 @@ public class InnerExam {
     System.out.println(cal.value);
     
     // 내부 클래스 - static 클래스
-    //InnerExam.Cal cal = new InnerExam().Cal();
-    //cal.plus();
-    //System.out.println(cal.value);
+    // InnerExam.Cal cal = new InnerExam().Cal();
+    // cal.plus();
+    // System.out.println(cal.value);
     
-    //InnerExam t = new InnerExam3();
-		//t.exec();
+    // InnerExam t = new InnerExam3();
+    //t.exec();
   }
 }
 ```
-
-
-
