@@ -98,8 +98,7 @@ Car(String modelName, int modelYear) {}
 
 ### 객체와 인스턴스 관계
 클래스로부터 객체를 만드는 과정을 클래스의 인스턴스화라고 함
-클래스 ---------------> 인스턴스(객체)
-          인스턴스화 
+클래스 --> 인스턴스화 ---------------> 인스턴스(객체) 
 
 #### 인스턴스
 - 자바에서는 클래스를 사용하기 위해 우선 해당 클래스 타입의 객체를 선턴해야함
@@ -184,3 +183,78 @@ public class Child extends Parent {
   }
 }
 ```
+
+### 내부 클래스
+하나의 클래스 내부에 선언된 또 다른 클래스
+
+```java
+class Outer { // 외부 클래스
+  ...
+  class Inner { // 내부 클래스
+    ...
+  }
+}
+```
+
+#### 내부 클래스 장점
+- 내부 클래스에서 외부 클래스의 멤버에 손쉽게 접근할 수 있음
+- 서로 관련 있는 클래스를 논리적으로 묶어서 표현함으로써 코드의 캡슐화 증가
+- 외부에서는 내부 클래스에 접근할 수 없으므로 코드의 복잡성을 줄일 수 있음
+
+#### 내부 클래스 종류
+1. 정적 클래스
+2. 인스턴스 클래스
+3. 지역 클래스
+4. 익명 클래스
+
+```java
+public class InnerExam {
+  
+  class Cal { - 중첩 클래스
+    int value = 0;
+    public void plus() {
+      value++;
+    }
+  }
+  
+  Cal cal = new Cal();
+		cal.plus();
+		System.out.println(cal.value);
+  
+  //static class Cal{
+	//	int value = 0;
+	//	public void plus() {
+	//		value++;
+	//	}
+	//}
+  
+  // 메소드 안에 클래스 선언
+  //public void exec() {
+	//	class Cal{
+	//		int value = 0;
+	//		public void plus() {
+	//			value++;
+	//		}
+	//	}
+	}
+  
+  public static void main(String[] args) {
+    // 내부 클래스 - 중첩 클래스
+    InnerExam exam = new InnerExam();
+    InnerExam.Cal cal = exam.new Cal();
+    cal.plus();
+    System.out.println(cal.value);
+    
+    // 내부 클래스 - static 클래스
+    //InnerExam.Cal cal = new InnerExam().Cal();
+    //cal.plus();
+    //System.out.println(cal.value);
+    
+    //InnerExam t = new InnerExam3();
+		//t.exec();
+  }
+}
+```
+
+
+
