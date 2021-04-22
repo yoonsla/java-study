@@ -56,15 +56,70 @@ public Class Car {
 - 즉, 메소드를 사용하면 중복되는 코드의 반복적인 프로그래밍을 피할 수 있음
 - 내부에서 사용하는 메소드는 접근제어자를 private으로 설정하고 그 외에는 상황에 맞게 public, default, protected로 설정
 
-#### 오버로딩 & 오버라이딩
+##### 오버로딩 & 오버라이딩
 1. 오버로딩
 - 같은 이름의 메소드 여러개를 가지면서 매개변수의 유형과 개수가 다르도록 하는 기술
 - 같은 이름의 메소드를 여러개 정의하고 매개변수의 유형과 개수를 다르게 하여 다양한 유형의 호출에 응답할 수 있음
 
+```java
+class overloadingTest {
+	void cat() {
+		System.out.println("매개변수 없음");
+	}
+	void cat(int a, int b) {
+		System.out.println("매개변수 : " + a + "/" + b);
+	}
+
+	void cat(String c) {
+		System.out.println("매개변수 : " + c);
+	}
+}
+
+public class overTest {
+  public static void main(String [] args) {
+    SpringApplication.run(TestApplication.class, args);
+
+		overloadingTest ot = new overloadingTest();
+		ot.cat();             // cat() 호출
+		ot.cat(20,80);        // cat(int, int) 호출
+		ot.cat("고양이는 귀여워");     // cat(String) 호출
+  }
+}
+```
 
 2. 오버라이딩
 - 상위 클래스가 가지고 있는 메소드를 하위 클래스가 재정의하여 사용하는 것
 
+```java
+class Woman {
+	public String name;
+	public int age;
+
+	public void info() {
+		System.out.println("여자의 이름은 " + name + "이며 나이는 " + "age" + "입니다");
+	}
+}
+
+class Job extends Woman{
+	String job;
+
+	public void info() {
+		super.info();
+		System.out.println();
+	}
+}
+
+public overTest {
+  public void main(String[] args) {
+    Job job = new Job();
+    Job job = new Job();
+		job.name = "미숙이";
+		job.age = 30;
+		job.job = "프로그래머";
+		job.info();
+  }
+}
+```
 
 ##### 접근제어자
 java에서 정보 은닉을 구체화할 수 있는 방법
