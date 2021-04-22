@@ -96,6 +96,11 @@ Car(String modelName, int modelYear) {}
 ...
 ```
 
+### 객체와 인스턴스 관계
+클래스로부터 객체를 만드는 과정을 클래스의 인스턴스화라고 함
+클래스 ---------------> 인스턴스(객체)
+          인스턴스화 
+
 #### 인스턴스
 - 자바에서는 클래스를 사용하기 위해 우선 해당 클래스 타입의 객체를 선턴해야함
 - 이렇게 클래스로부터 객체를 선언하는 과정을 클래스의 인스턴스 화라고 함
@@ -122,4 +127,60 @@ public class Main {
 }
 ```
 
+<객체 생성>
+    - 클래스명 
+    - 변수명 = new 클래스명();
 
+<new 키워드>
+    - 클래스 타입의 인스턴스(객체)를 생성해 주는 역할
+    - Heap 영역에 데이터를 저장할 공간 할당 및 그 공간의 참조값을 객체엑 반환, 생성자 호출
+
+<this>
+      - 현재 클래스의 인스턴스를 의미
+      - 즉, 현재 클래스의 멤버 변수를 지정할 때 사용, 객체 자신
+
+```java
+public class Parent {
+  private String mother;
+  private String father;
+  
+  public Parent() {
+    this.mother = "mother";
+    this.father = "father";
+  }
+  
+  public Parent(String mother, String father) {
+    this.mother = mother;
+    this.father = father;
+  }
+  
+  public String toString() {
+    return this.mother + "/" + this.father;
+  }
+}
+```
+
+<super>
+    - 자식 클래스가 자신을 생성할 때 부모 클래스의 생성자를 불러 초기화 할 때 사용
+
+```java
+public class Child extends Parent {
+  private String son;
+  private String doughter;
+  
+  public Child() {
+    this("doughter","son");
+  }
+  
+  public Child(String doughter, String son) {
+    // parentClass 생성자 호출
+    super("child.mother", "child.father");
+    this.doughter = doughter;
+    this.son = son;
+  }
+  
+  public String toString() {
+    return super.getFather() + "/" + super.getMother() + "/" + this.doughter + "/" + this.son;
+  }
+}
+```
