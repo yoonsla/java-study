@@ -56,6 +56,9 @@ public Class Car {
 - 즉, 메소드를 사용하면 중복되는 코드의 반복적인 프로그래밍을 피할 수 있음
 - 내부에서 사용하는 메소드는 접근제어자를 private으로 설정하고 그 외에는 상황에 맞게 public, default, protected로 설정
 
+#### 오버라이딩 & 오버로딩
+
+
 ##### 접근제어자
 java에서 정보 은닉을 구체화할 수 있는 방법
 - private : 같은 클래스 내에서만 접근 가능
@@ -221,15 +224,15 @@ public class InnerExam {
 		cal.plus();
 		System.out.println(cal.value);
   
-  //static class Cal{
-	//	int value = 0;
-	//	public void plus() {
-	//		value++;
-	//	}
-	//}
+  // static class Cal{
+  //	int value = 0;
+  //	public void plus() {
+  //		value++;
+  //	}
+  // }
   
   // 메소드 안에 클래스 선언
-  //public void exec() {
+  // public void exec() {
   //	class Cal{
   //		int value = 0;
   //		public void plus() {
