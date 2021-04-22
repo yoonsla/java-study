@@ -230,13 +230,13 @@ public class InnerExam {
   
   // 메소드 안에 클래스 선언
   //public void exec() {
-	//	class Cal{
-	//		int value = 0;
-	//		public void plus() {
-	//			value++;
-	//		}
-	//	}
-	}
+  //	class Cal{
+  //		int value = 0;
+  //		public void plus() {
+  //			value++;
+  //		}
+  //	}
+}
   
   public static void main(String[] args) {
     // 내부 클래스 - 중첩 클래스
