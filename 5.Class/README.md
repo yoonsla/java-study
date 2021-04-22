@@ -6,6 +6,11 @@
 - 메소드 : 어떠한 특정 작업을 수행하기 위한 명령문의 집합
 
 ```java
+
+접근제어자 class 클래스 이름 {
+
+}
+
 public class Body {
   
   // 필드
@@ -26,6 +31,61 @@ public class Body {
     System.out.println("걷는다);
   }
 }
+```
+
+### 클래스 구성요소
+#### 필드
+클래스 내에서 필드는 선언된 위치에 따라 다음과 같이 구분됨
+1. 클래스 변수
+2. 인스턴스 변수
+3. 지역 변수
+
+```java
+public Class Car {
+  static int modelOutput; // 클래스 변수
+  String modelName;       // 인스턴스 변수
+  
+  public void carList() {
+    int something = 10;   // 지역 변수
+  }
+}
+```
+
+#### 메소드
+클래스에서 메소드란 어떠한 특정 작업을 수행하기 위한 명령문의 집합
+즉, 메소드를 사용하면 중복되는 코드의 반복적인 프로그래밍을 피할 수 있음
+
+```java
+접근제어자 반환타입 메소드이름(매개변수목록) {
+
+}
+
+public class Car {
+  private int curentSpeed;
+  private int accelerationTime;
+  
+  public void accelerate(int speed, int second) {   // 선언부
+    // 구현부
+    System.out.prinlin(second + "초간 속도를 시속" + speed + "로 가속");
+  }
+}
+```
+
+#### 생성자(constructor)
+- 클래스를 가지고 객체를 생성하면 해당 객체는 메모리에 즉시 생성됨
+- 하지만 이렇게 생성된 모든 인스턴스 변수가 아직 초기화 되지 않은 상태임
+- 따라서 자바에서는 객체의 생성과 동시에 인스턴스 변수를 원하는 값으로 초기화할 수 있는 생성자라는 메소드를 제공함
+- 자바에서 생성자의 이름은 해당 클래스의 이름과 같아야 함
+- 생성자는 반환값이 없음
+- 생성자는 매개변수에 따라 여러개가 정의 될 수 있음
+
+``` java
+// 클래스 이름() {...} -> 매개변수가 없는 생성자 선언
+// 클래스 이름(인수1, 인수2, ...) {...} 매개변수가 있는 생성자 선언
+
+Car(String modelName) {}
+Car(String modelName, int modelYear) {}
+...
 ```
 
 #### 인스턴스
@@ -53,3 +113,5 @@ public class Main {
   }
 }
 ```
+
+
