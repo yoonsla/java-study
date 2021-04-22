@@ -34,9 +34,9 @@ if(num < 0) {
 #### if-else if-else문
 ```java
 int num = 0;
-if(num < 0) {
+if (num < 0) {
   // if 조건식에 대해 true일 경우 실행되는 영역
-} else if (num > 0{
+} else if (num > 0) {
   // else if 조건식에 대해 true일 경우 실행되는 영역
 } else {
   // 그 외에 실행되는 영역
@@ -61,7 +61,7 @@ if (num > 0) {
 
 ```java
 String str = "hello";
-switch(str) {
+switch (str) {
   case "hi" : 
   ...
   break;
@@ -96,7 +96,7 @@ continue 이후의 문장들은 실행되지 않음
 
 ```java
 int i = 1;
-while(i<=10) {
+while (i <= 10) {
   System.out.println(i + "번 째 진행 중");
 }
 System.out.println("반복 끝나면 종료");
