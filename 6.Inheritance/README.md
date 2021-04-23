@@ -57,6 +57,34 @@ implements를 통해 부모클래스에서 선언한 변수/메소드를 자식�
 ```java
 ex:
 public class Son implements Mather, Father {...}
+
+public class Inheritance {
+
+    public interface InterExample {
+        void makeThis();
+        void makeThisWithParam(String name, int age);
+    }
+
+    public static class ImplementInterface implements InterExample {
+
+        // implements를 받으면 인터페이스에서 정의한 메소드를 반드시 구현해야 한다.
+        @Override
+        public void makeThis() { // 구현하지 않으면 오류
+            System.out.println("makeThis.....");
+        }
+
+        @Override
+        public void makeThisWithParam(String name, int age) {
+            System.out.println("makeThisWithParam...." + name + "/" + age);
+        }
+    }
+
+    public static void main(String [] args) {
+        ImplementInterface implementInterface = new ImplementInterface();
+        implementInterface.makeThis();
+        implementInterface.makeThisWithParam("name", 32);
+    }
+}
 ```
 
 ### extends vs implements
