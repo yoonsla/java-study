@@ -17,6 +17,7 @@ public class Inheritance {
         }
     }
 
+    // extends를 사용하면 메소드 뿐만 아니라 변수까지 사용이 가능하다
     public class ChildClass extends ParentClass{
         String child = "아이야";
 
@@ -45,6 +46,31 @@ public class Inheritance {
 3. Child Class 출력 실행
 자식 클래스가 부모클래스의 속성을 그대로 물려받아 사용한다.
 ```
+
+**but**, 자바는 **다중상속** 을 지원하지 않는다. 
+다중상속이란 부모 클래스가 두 개 이상 존재할 수 있다는 것이다.
+그래서 자바에는 implements(인터페이스)가 있다.
+
+# implements
+implements를 통해 부모클래스에서 선언한 변수/메소드를 자식클래스에 재정의(오버라이딩)를 통해 인터페이스를 구현하여 상속받을 수 있다.
+
+```java
+ex:
+public class Son implements Mather, Father {...}
+```
+
+### extends vs implements
+extends는 클래스를 확장하는 것이며 implements는 인터페이스를 구현하는 것이다.
+
+1. extends는 일반 클래스와 abstract 클래스 상속에 사용되고, implement는 interface 상속에 사용된다.
+2. class가 class를 상속 받을 땐 extends를 사용하고, interface가 interface를 상속 받을 땐 extends를 사용한다.
+3. class가 interface를 사용할 땐 implements를 사용한다.
+4. interface가 class를 사용할 땐 implements를 사용할 수 없다.
+5. extends는 클래스 한 개만 상속 받을 수 있다.
+6. extends 자신 클래스는 부모 클래스의 기능을 사용한다.
+7. implements는 여러개 사용 가능하다.
+8. implements는 설계 목적으로 구현이 가능하다.
+9. implements한 클래스는 implements의 내용을 전부 사용해야 한다.
 
 
 
