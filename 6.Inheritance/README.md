@@ -217,7 +217,19 @@ public class Student extends Human { // 컴파일 에러 발생
 ```
 
 # Object 클래스
+- Object 클래스는 java.lang 패키지에 존재하는 것으로 모든 클래스의 직,간접적 슈퍼클래스이다.
+- Object 클래스는 매개변수 없는 생성자를 가지고 있다.
+- 최상위 클래스이기 때문에 모든 클래스를 받을 수 있다.
+- 모든 클래스에서 Object 클래스의 멤버를 사용할 수 있다.
 
+### Object 클래스의 내장 메소드
+![image](https://user-images.githubusercontent.com/53419498/116063946-829a1600-a6c0-11eb-8a58-f70689c4d6cc.png)
+
+# String 클래스
+- String 클래스에는 문자열과 관련된 작업을 유용하게 사용할 수 있는 메소드가 있다.
+- String 인스턴스는 한 번 생성되면 그 값을 읽기만 할 수 있으며 변경할 수는 없다. **(불변 클래스)**
+- 즉, 기존 분자열의 내용이 변경되는 것이 아니라 새로운 String 인스턴스가 생성되는 것이다.
+![Uploading image.png…]()
 
 
 
