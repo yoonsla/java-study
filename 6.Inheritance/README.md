@@ -228,7 +228,7 @@ public class Student extends Human { // 컴파일 에러 발생
 # String 클래스
 - String 클래스에는 문자열과 관련된 작업을 유용하게 사용할 수 있는 메소드가 있다.
 - String 인스턴스는 한 번 생성되면 그 값을 읽기만 할 수 있으며 변경할 수는 없다. **(불변 클래스)**
-- 즉, 기존 분자열의 내용이 변경되는 것이 아니라 새로운 String 인스턴스가 생성되는 것이다.
+- 즉, 기존 분자열의 내용이 변경되는 것이 아니라 새로운 String 인스턴스가 생성되는 것이다..
 ![image](https://user-images.githubusercontent.com/53419498/116064281-d3117380-a6c0-11eb-902c-9e18625af22e.png)
 
 
