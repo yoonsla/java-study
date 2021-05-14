@@ -35,19 +35,18 @@ public class Test2() {...}
 - java.util : Java Utilities Package
 
 ### complie with package
-일반 컴파일: javac 클래스파일명.java
-패키지 컴파일: javac -d 클래스 저장위치 클래스 파일명
+- 일반 컴파일: javac 클래스파일명.java
+- 패키지 컴파일: javac -d 클래스 저장위치 클래스 파일명
 ```
-(ex)
-javac -d . HelloWorld.java
+ex: javac -d . HelloWorld.java
 
 javac -d . 클래스명.java                  // 현재 폴더에 생성
 javac -d ../bin 클래스명.java             // 현재 폴더와 같은 레벨 bin 폴더에 생성
 javac -d ~/Desktop/test 클래스명.java     // 지정 폴더에 생성
 ```
 **패키지 실행**
-일반 실행: java클래스 파일명
-패키지 실행: java 패키지명.클래스 파일명
+- 일반 실행: java클래스 파일명
+- 패키지 실행: java 패키지명.클래스 파일명
 ```
 (ex)
 java test.sy.HelloWorld
