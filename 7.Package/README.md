@@ -18,21 +18,21 @@ public class Test2() {...}
 - 모두 소문자로 작성하는 것이 관례이다.
 
 ### 주요 package
-java.applet : Java Appet Package
-java.awt : Java Abstract Windowing Toolkit Package
-java.awt.datatransfer : Java Data Transfer Package
-java.awt.event : Java AWT Event Package
-java.awt.image : Java AWT Image Package
-java.awt.peer : Java AWT Peer Package
-java.beans : Java Beans Package
-java.io : Java Input/Output Package
-java.lang : Java Language Package(기본 패키지로 import문 없이 사용)
-java.lang.reflect : Java Core Reflection Package
-java.net : Java Networking Package
-java.rmi : Java Remote Method Invocaion Package
-java.security : Java Database Connectivity Package
-java.text : Java Text Package
-java.util : Java Utilities Package
+- java.applet : Java Appet Package
+- java.awt : Java Abstract Windowing Toolkit Package
+- java.awt.datatransfer : Java Data Transfer Package
+- java.awt.event : Java AWT Event Package
+- java.awt.image : Java AWT Image Package
+- java.awt.peer : Java AWT Peer Package
+- java.beans : Java Beans Package
+- java.io : Java Input/Output Package
+- java.lang : Java Language Package(기본 패키지로 import문 없이 사용)
+- java.lang.reflect : Java Core Reflection Package
+- java.net : Java Networking Package
+- java.rmi : Java Remote Method Invocaion Package
+- java.security : Java Database Connectivity Package
+- java.text : Java Text Package
+- java.util : Java Utilities Package
 
 ### complie with package
 일반 컴파일: javac 클래스파일명.java
@@ -52,3 +52,5 @@ javac -d ~/Desktop/test 클래스명.java     // 지정 폴더에 생성
 (ex)
 java test.sy.HelloWorld
 ```
+
+# import
