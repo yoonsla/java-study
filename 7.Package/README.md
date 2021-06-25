@@ -53,3 +53,7 @@ java test.sy.HelloWorld
 ```
 
 # import
+# import란?
+import는 다른 패키지 안에 있는 클래스/메소드/변수를 사용하고자 할 때 쓰는 키워드이다.
+package 아래에 import 패키지명.클래스명을 적어 사용한다.
+
